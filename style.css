@@ -1,6 +1,6 @@
 
 body {
-    background-color: #f0f0f0;
+    background-color: black;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -41,11 +41,11 @@ button {
     margin-left: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #5c8af7;
+    background-color: green;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4a76d4;
+    background-color: red;
 }
