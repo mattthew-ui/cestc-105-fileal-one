@@ -20,4 +20,27 @@ function toggleItem(index) {
     items[index].purchased = !items[index].purchased;
     renderItems();
 }
+//defines how each item in an array is rendered in a FlatList component
+function renderItems(filter = 'all') {
+    groceryList.innerHTML = ''; 
 
+    const filteredItems = items.filter(item => {
+        if (filter === 'toBuy') return !item.purchased;
+        if (filter === 'purchased') return item.purchased;
+        return true; 
+    });
+
+    filteredItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item.name;
+        li.classList.toggle('purchased', item.purchased);
+        li.addEventListener('click', () => toggleItem(index));
+        groceryList.appendChild(li);
+    });
+}
+
+allBtn.addEventListener('click', () => renderItems('all'));
+toBuyBtn.addEventListener('click', () => renderItems('toBuy'));
+purchasedBtn.addEventListener('click', () => renderItems('purchased'));
+
+renderItems();
