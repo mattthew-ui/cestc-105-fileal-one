@@ -20,9 +20,10 @@ function toggleItem(index) {
     items[index].purchased = !items[index].purchased;
     renderItems();
 }
-//defines how each item in an array is rendered in a FlatList component
+
 function renderItems(filter = 'all') {
     groceryList.innerHTML = ''; 
+
 
     const filteredItems = items.filter(item => {
         if (filter === 'toBuy') return !item.purchased;
