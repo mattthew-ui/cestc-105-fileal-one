@@ -24,6 +24,7 @@ function toggleItem(index) {
 function renderItems(filter = 'all') {
     groceryList.innerHTML = ''; 
 
+
     const filteredItems = items.filter(item => {
         if (filter === 'toBuy') return !item.purchased;
         if (filter === 'purchased') return item.purchased;

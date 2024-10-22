@@ -1,4 +1,28 @@
 
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #eaeaea;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li.purchased {
+    text-decoration: line-through;
+    background-color: #c4e3c4;
+
 body {
     background-color: black;
     font-family: sans-serif;
